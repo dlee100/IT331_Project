@@ -25,3 +25,38 @@
 	border-color: #80386A; color: #FFF; background: #666;
 }
 
+
+   /* vertical navbar */
+
+/*
+   #navlist {
+	background-color: black;
+	 padding: 0 1px 1px; margin: 0;
+	font: bold 1em; 
+	background: #DDDDDD;
+	width: 4em;
+	height: 1080px;
+	position: relative;
+	float: left;
+	
+	
+ }
+ #navlist li {
+	 margin: 0; border-top: 1px solid gray;
+	 list-style: none;
+ }
+ #navlist li a {
+	 display: block; 
+	   width: auto; padding: 0.25em 0.5em 0.25em 0.75em;
+	 border-left: 1em solid #AAB; text-decoration: none;
+ }
+ #navlist li a:link {
+	 color: #80386A;
+ }
+ #navlist li a:visited {
+	 color: #666;
+ }
+ #navlist li a:hover {
+	 border-color: #80386A; color: #FFF; background: #666;
+ }
+ */
