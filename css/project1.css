@@ -1,6 +1,85 @@
+@charset "UTF-8";
+
 /*Styles page for my website*/
 
+body, nav  {
+   	margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+/*vertical nav bar*/
+#navlist {
+   
+   
+	background-color: black;
+	font: bold 1em; 
+	background: black;
+	width: 6em;
+	
+	position: relative;
+   float: left;
+   margin-right: 0;
+
+ }
+ #navlist li {
+   margin: 0; 
+    border-top: 1px solid green;
+	 list-style: none;
+ }
+ #navlist li a {
+	 display: block; 
+      width: auto; 
+      padding: 0.25em 0.5em 0.25em 0.25em;
+    border-left: 1em solid black; 
+    border-right: 1em solid black;
+    text-decoration: none;
+ }
+ #navlist li a:link {
+	 color: white;
+ }
+ #navlist li a:visited {
+	 color: yellow;
+ }
+ #navlist li a:hover {
+	 border-color: #80386A; color: #FFF; background: black;
+ }
+
+
+
+#mother{
+   float: inline-start;
+   background-color: lightblue;
+   
+   
+}
+
+#child{
+   text-indent: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* vertical navbar */
+/*
 #navlist {
 	padding: 0 1px 1px; margin: 0;
 	font: bold 1em; background: #DDDDDD;
@@ -24,7 +103,7 @@
 #navlist li a:hover {
 	border-color: #80386A; color: #FFF; background: #666;
 }
-
+*/
 
    /* vertical navbar */
 
