@@ -101,6 +101,12 @@ footer{
 #linkport a:visited{
 	color: blue;
 }
+#foot {
+	color: gray;
+}
+#foot a:hover{
+	border-color: rgb(145, 248, 231); background: pink;
+}
 
 #occupations{
 	box-shadow: -25px 25px 50px dimgrey; 
@@ -120,6 +126,12 @@ h1{
 #writing{
 	margin-left: 1em;
 	text-align: center;
+	
+}
+
+ul.a{
+	list-style-type: square;
+	
 }
 
 #container{
@@ -138,6 +150,10 @@ th{
 td{
 	border-spacing: 2em;
 }
+
+.shade { background: #CCFFFF; }
+
+
 caption{
 	text-align: center;
 	background: rgb(90, 194, 207);
