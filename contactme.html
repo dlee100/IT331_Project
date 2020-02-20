@@ -22,11 +22,16 @@
 
    <section id = "mother">
       <section id = "child">
-         <br/><h1>Contact Me</h1> <br/> <br/>
+          
+         <h1>Contact Me</h1>
+         <img src="images/contact.jpg" id="contactpic" alt="Photo by Torsten Dettlaff from Pexels">
          <div id="form">
                 <form autocomplete="on">
+                    <fieldset>
+                        
                         <p><label>Your Name: <input name="name" type="text" size="25"></label></p>
                         <p><label>Your Email Address: <input name="email" type="email" size="50"></label></p>
+                    
                         <p><label>Today is: <select id="days" name="days">
                                         <option selected>- Choose One -</option>
                                         <option value="Monday">Monday</option>
@@ -37,7 +42,10 @@
                                         <option value="Saturday">Saturday</option>
                                         <option value="Sunday">Sunday</option>
                               </select></label></p>
-
+                              
+                              
+                              
+                        
                         <p><label>The month is: <input name="months" type="year" placeholder="Select the month" list="month">
                             <datalist id="months">
                                 <option value="January">
@@ -53,6 +61,18 @@
                                 <option value="November">
                                 <option value="December">
                             </datalist></label></p>
+                        
+
+                            <label>What brings you here? <br>
+                                <input type="checkbox" id="choice1" name="editing" value="edit">
+                                <label for="vehicle1"> Editing</label>
+                                <input type="checkbox" id="choice2" name="looking around" value="look">
+                                <label for="vehicle2"> Looking around</label>
+                                <input type="checkbox" id="choice3" name="grading" value="grade">
+                                <label for="vehicle3"> Grading</label>
+                                <input type="checkbox" id="choice4" name="other" value="other">
+                                <label for="vehicle3"> Other</label>
+                                </label>
 
                         <p><label>How would you rate my website?
                             <select name="rating">
@@ -66,13 +86,13 @@
                             </select>
                         </label></p>
                         
-                        <p><label>Comments<br>
-                            <textarea name="comments" rows="6" cols="72"></textarea>
+                        <p><legend><label>Comments<br></legend>
+                            <textarea name="comments" rows="5" cols="72"></textarea>
                         </label></p>
             
                         <p>Would you like to personally email me?
-                            <label> <br><br>
-                                <input type="radio" name="select" id="yes"> Yes <br>
+                            <label>
+                                <input type="radio" name="select" id="yes"> Yes 
                                 <input type="radio" name="select" id="no"> No <br>
                             </label>
                         </p>
@@ -80,6 +100,7 @@
                             <input type = "submit" value="submit">
                             <input type = "reset" value="clear">
                         </p>
+                    </fieldset>
                     </form>
                </div>
                
@@ -87,8 +108,10 @@
          
    </section>
 
-   <footer>Disclaimer Statement: “This website is developed as an educational project." </footer>
-
+   <footer>Disclaimer Statement: “This website is developed as an educational project." 
+        “Certain materials are included under the fair use exemption of the U.S. Copyright Law 
+        and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
+     <a href="references.html">References Page</a></footer>
 
 </body>
 

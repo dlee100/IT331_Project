@@ -65,8 +65,51 @@ html, body {
 
 footer{
 	margin-left:6em;
+
+}
+
+#linkedin{
+	align-content: center;
+}
+
+
+
+#frame {
 	
+	border: 3px solid purple;
+	background-color: lavender; 
+	margin: auto;
+	padding: 10px 15px;
 	
+	}
+	
+
+#linkport{
+	border: 1px solid black;
+	color: black;
+	border-radius: 15px;
+	height: 8em;
+	margin: 2em;
+	text-align: center;
+	box-shadow: -25px 25px 50px dimgrey;
+}
+
+#linkport a:hover{
+	border-color: rgb(145, 248, 231); color: #FFF; background: white;
+}
+
+#linkport a:visited{
+	color: blue;
+}
+
+#occupations{
+	box-shadow: -25px 25px 50px dimgrey; 
+}
+
+#contactpic{
+	float: inline-start;
+	width: 20em;
+	height: 16em;
 }
 
 h1{
@@ -97,4 +140,20 @@ td{
 }
 caption{
 	text-align: center;
+	background: rgb(90, 194, 207);
+	color: white;
+}
+
+
+fieldset {
+  width: 60%;
+  border: 2px solid #00F;
+  background: pink;
+  padding-top: 1em; 
+  
+}
+legend {
+  font-weight: bold;
+  background: powderblue;
+  padding: 0.25em;
 }
