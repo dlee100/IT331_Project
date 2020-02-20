@@ -53,8 +53,9 @@ html, body {
 
 #mother{
    /*float: inline-start;*/
-   background-color: lightblue;
+   background-color: whitesmoke;
    height: 100%;
+   margin-left: 6em;
    
 }
 
@@ -62,4 +63,38 @@ html, body {
    text-indent: 1em;
 }
 
+footer{
+	margin-left:6em;
+	
+	
+}
 
+h1{
+	text-align: center;
+	text-shadow: -4px 4px 6px dimgrey; 
+}
+
+#writing{
+	margin-left: 1em;
+	text-align: center;
+}
+
+#container{
+	margin-left: 3em;
+}
+
+table, th, td{
+	margin-left: 17em;
+	padding: 1em;
+	border: 2px solid black;
+	
+}
+th{
+	background: rgb(90, 194, 207);
+}
+td{
+	border-spacing: 2em;
+}
+caption{
+	text-align: center;
+}
