@@ -26,6 +26,9 @@ html, body {
     margin-right: 0;
 
  }
+ #navlist ul{
+	padding-left: 0px;
+ }
  #navlist li {
 	margin-top: 1em;
     margin-bottom: 1em;
@@ -129,6 +132,8 @@ h1{
 	
 }
 
+ul{list-style: none;}
+
 ul.a{
 	list-style-type: square;
 	
@@ -164,7 +169,7 @@ caption{
 fieldset {
   width: 60%;
   border: 2px solid #00F;
-  background: pink;
+  background: transparent;
   padding-top: 1em; 
   
 }
