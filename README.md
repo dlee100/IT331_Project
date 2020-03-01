@@ -5,4 +5,4 @@ Project 1 is completed. score: 48/50
 
 This is Project 2.
 
-Focus: JavaScript
+Focus: JavaScript and Restructuring the website

@@ -3,58 +3,64 @@
 <head>
 <title>Home Page</title>
 <meta charset="UTF-8"/>
-<link rel="stylesheet" type="text/css" href="css/project1.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
 <body>
-
-   <nav id="navlist">
-      <ul>
-      <li><a href="index.html">Home</a></li> 
-      <li><a href="occupations.html">Occup.</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contactme.html">Contact Me</a></li>
-      <li><a href="css/project1.css">Style Sheet</a></li>
+<div class="page-container">
+   
+   <!--Vertical Nav Bar-->
+   <nav class="nav-bar">
+      <ul class="nav-content">
+         <li class="nav-item"><a href="index.html">Home</a></li> 
+         <li class="nav-item"><a href="occupations.html">Occup.</a></li>
+         <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+         <li class="nav-item"><a href="contactme.html">Contact Me</a></li>
+         <li class="nav-item"><a href="css/project1.css">Style Sheet</a></li>
       </ul>
    </nav>
 
-   <section id = "mother">
+   <!--Main Content-->
+   <section class = "main"> <!--MAIN-->
+
+      <header> <a id="content"> <br> <h1>Daniel J Lee</h1> </a> </header>
+
       <section id = "child">
-         <a id="content">
-        <br> <h1>Daniel Lee</h1> <a href="#footer" id="foot">Jump to footer</a> </a>
-
-         <div id="writing">
-            <ul class="a"><li>This website is my personal about and portfolio hub.</li></ul>
-            <ul class="a"><li>I am currently a senior undergraduate student in George Mason University. I am studying in the Information Technology
-               major and I am concentrating my degree in <a href="https://catalog.gmu.edu/colleges-schools/engineering/information-sciences-technology/information-technology-bs/#wdm">
-                  Web Development</a>. I am graduating in December 2020. This Summer I am starting my internship at <a href="https://www.ablevets.com/">AbleVets LLC</a> as a DevOps Engineer Intern.</li></ul>
-         </div> 
-
+         
+      
          <div id="container">
                
+               <article>
+                  <section id="pictures">
+                        
+                     <div style="background-color:transparent;"><img src="images/mexico.png" 
+                        alt="Me and Patrisha in Mexico" style="width:40em; height:25em;"></div>
+                            
+                  </section>
+               </article>
                
-               <div class="row">
-                 <div class="col-sm-4" style="background-color:transparent;"><img src="images/IMG_6043.png" 
-                  alt="Me and Patrisha in Mexico" style="width:15em; height:25em;"></div>
-
-                 <div class="col-sm-4" id="frame"><img src="images/IMG_1742.jpg" 
-                  alt="Me and Theo" style="width:15em; height:25em; margin-left: 2em;"></div>
-
-                 <div class="col-sm-4" style="background-color:transparent;"><img src="images/IMG_6040.JPG" 
-                  alt="Me and my fiancée, Patrisha" style="width:15em; height:25em;"></div>
-               </div>
+               <aside>
+                  <section id="writing">
+                     <p>
+                     This website is my personal about and portfolio hub.<br/>
+                     I am currently a senior undergraduate student in George Mason University. 
+                     I am studying in the Information Technology major and I am concentrating my degree in Web Development. 
+                     I am graduating in December 2020. This Summer I am starting my internship at AbleVets LLC as a DevOps Engineer Intern.
+                     </p>
+                  </section>
+               </aside>
+               
              </div>
          </section>
+         <a id="footer">
+            <footer>Disclaimer Statement: “This website is developed as an educational project. Certain materials are included under the fair use exemption of the U.S. Copyright Law 
+               and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
+            <a href="references.html">References Page</a></footer></a> 
    </section>
 
-<a id="footer">
-<footer>Disclaimer Statement: “This website is developed as an educational project." 
-   “Certain materials are included under the fair use exemption of the U.S. Copyright Law 
-   and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
-<a href="references.html">References Page</a></footer></a> <a href="#content">Jump back to content</a>
+ 
 
+</div>
 </body>
 </html>
