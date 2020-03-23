@@ -1,65 +1,139 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Home Page</title>
+<title>Daniel Lee</title>
 <meta charset="UTF-8"/>
 <!--My Style Sheet-->
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <!--Icon Library-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript">
+
+</script>
+
 </head>
 
 <body>
-<div class="page-container">
+   <div class="page-container">
    
    <!--Vertical Nav Bar-->
-   <nav class="nav-bar">
-      <ul class="nav-content">
-         <li class="nav-item"><a class="active" href="index.html"><i class="fa fa-fw fa-home"></i></a></li> 
-         <li class="nav-item"><a href="occupations.html"><i class="fa fa-fw fa-money"></i></a></li>
-         <li class="nav-item"><a href="portfolio.html"><i class="fa fa-fw fa-code"></i></a></li>
-         <li class="nav-item"><a href="contactme.html"><i class="fa fa-fw fa-envelope"></i></a></li>
-         <li class="nav-item"><a href="css/styles.css"><i class="fa fa-fw fa-css3"></i></a></li>
-      </ul>
-   </nav>
+      <nav class="navbar">
+         <ul class="navbar-nav">
+            <li class="logo">
+               <a class="nav-link" href="index.html">
+                  <span class="link-text logo-text">Home</span>
+                  <i class="fa fa-fw fa-home"></i>
+               </a>
+            </li> 
+            <li class="logo">
+               <a class="nav-link" href="occupations.html">
+                  <span class="link-text logo-text">Occupations</span>
+                  <i class="fa fa-fw fa-money"></i>
+               </a>
+            </li>
+            <li class="logo">
+               <a class="nav-link" href="portfolio.html">
+                  <span class="link-text logo-text">Portfolio</span>
+                  <i class="fa fa-fw fa-code"></i>
+               </a>
+            </li>
+            <li class="logo">
+               <a class="nav-link" href="contactme.html">
+                  <span class="link-text logo-text">Contact Me</span>
+                  <i class="fa fa-fw fa-envelope"></i>
+               </a>
+            </li>
+            <li class="logo">
+               <a class="nav-link" href="css/styles.css">
+                  <span class="link-text logo-text">Styles</span>
+                  <i class="fa fa-fw fa-css3"></i>
+               </a>
+            </li>
+         </ul>
+      </nav>
 
    <!--Main Content-->
-   <section class = "main"> <!--MAIN-->
+      <section class = "main"> <!--MAIN-->
 
-      <header> <br> <h1>Daniel J Lee</h1> </header>
+         <header> <br> <h1>Daniel J Lee</h1> 
+            <script type="text/javascript">
+               // *** last modified
+               var lastMod = document.lastModified;
+               document.writeln("<p>Last Modified: ",lastMod,"</p>"); // last modified date and time
 
-      <section id = "child">
+               // *** external window for a user to input their information
+               var regUser;
+
+               function start(){
+                  document.getElementById("openW").addEventListener("click",open_window,false);
+                  document.getElementById("closeW").addEventListener("click",close_window,false);
+               }
+
+               function open_window(){
+                  regUser = document.open("/register.html", "", "height=400, width=300")
+                  document.getElementById("closeW").disabled = false; // disables close button initially
+               }
+
+               function close_window(){
+                  if (regUser.closed)
+                     alert("the window has already been closed!"); //alerts user that the window is already closed
+                  else
+                     regUser.close(); // closes the window
+               }
+
+               window.addEventListener("load", start, false);
+
+               // *** localStorage data input from register.html
+               localStorage.setItem("fname", ""); // ^^ need to link with register.html
+               localStorage.setItem("lname", ""); // ^^ need to link with register.html
+
+               for (var i=0; i<localStorage.length; i++){ //localStorage is also an array
+                  document.write(localStorage.getItem(localStorage.key(i))+"<br>"); // iterates the values
+               }
+
+
+            </script>
+
+            <form id="form1" name="form1" method="POST">
+               <input type = "button" name="openW" id="openW" value="Open Window">
+               <input type = "button" name="closeW" id="closeW" value="Close Window" disabled = "disabled">
+           </form>
+         </header>
+
+         <section id = "child">
+            
          
-      
-         <div id="container">
-               
-               <article>
-                  <section id="pictures">
-                        
-                     <div style="background-color:transparent;"><img src="images/mexico.png" 
-                        alt="Me and Patrisha in Mexico" style="width:40em; height:25em;"></div>
-                            
-                  </section>
-               </article>
-               
-               <aside>
-                  <section id="writing">
-                     <p>
-                     This website is my personal about and portfolio hub.<br/>
-                     I am currently a senior undergraduate student in George Mason University. 
-                     I am studying in the Information Technology major and I am concentrating my degree in Web Development. 
-                     I am graduating in December 2020. This Summer I am starting my internship at AbleVets LLC as a DevOps Engineer Intern.
-                     </p>
-                  </section>
-               </aside>
-               
-             </div>
+            <div id="container">
+                  
+                  <article>
+                     <section id="pictures">
+                           
+                        <div style="background-color:transparent;"><img src="images/mexico.png" 
+                           alt="Me and Patrisha in Mexico" style="width:40em; height:25em;"></div>
+                              
+                     </section>
+                  </article>
+                  
+                  <aside>
+                     <section id="writing">
+                        <p>
+                        This website is my personal about and portfolio hub.<br/>
+                        I am currently a senior undergraduate student in George Mason University. 
+                        I am studying in the Information Technology major and I am concentrating my degree in Web Development. 
+                        I am graduating in December 2020. This Summer I am starting my internship at AbleVets LLC as a DevOps Engineer Intern.
+                        </p>
+                     </section>
+                  </aside>
+                  
+               </div>
          </section>
-         <a id="footer">
-            <footer>Disclaimer Statement: “This website is developed as an educational project. Certain materials are included under the fair use exemption of the U.S. Copyright Law 
-               and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
-            <a href="references.html">References Page</a></footer></a> 
-   </section>
+            <a id="footer">
+               <footer>Disclaimer Statement: “This website is developed as an educational project. 
+                  Certain materials are included under the fair use exemption of the U.S. Copyright Law 
+                  and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
+               <a href="references.html">References Page</a></footer></a> 
+      </section>
 
  
 

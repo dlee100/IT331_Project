@@ -3,23 +3,51 @@
 <head>
 <title>My Occupations</title>
 <meta charset="UTF-8"/>
-<link rel="stylesheet" type="text/css" href="css/project1.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!--My Style Sheet-->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<!--Icon Library-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
 
 <body>
 
-   <nav id="navlist">
-      <ul>
-      <li><a href="index.html">Home</a></li> 
-      <li><a href="occupations.html">Occup.</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contactme.html">Contact Me</a></li>
-      <li><a href="css/project1.css">Style Sheet</a></li>
-      </ul>
-   </nav>
+   <!--Vertical Nav Bar-->
+   <nav class="navbar">
+        <ul class="navbar-nav">
+           <li class="logo">
+              <a class="nav-link" href="index.html">
+                 <span class="link-text logo-text">Fireship</span>
+                 <i class="fa fa-fw fa-home"></i>
+              </a>
+           </li> 
+           <li class="logo">
+              <a class="nav-link" href="occupations.html">
+                 <span class="link-text logo-text">Fireship</span>
+                 <i class="fa fa-fw fa-money"></i>
+              </a>
+           </li>
+           <li class="logo">
+              <a class="nav-link" href="portfolio.html">
+                 <span class="link-text logo-text">Fireship</span>
+                 <i class="fa fa-fw fa-code"></i>
+              </a>
+           </li>
+           <li class="logo">
+              <a class="nav-link" href="contactme.html">
+                 <span class="link-text logo-text">Fireship</span>
+                 <i class="fa fa-fw fa-envelope"></i>
+              </a>
+           </li>
+           <li class="logo">
+              <a class="nav-link" href="css/styles.css">
+                 <span class="link-text logo-text">Fireship</span>
+                 <i class="fa fa-fw fa-css3"></i>
+              </a>
+           </li>
+        </ul>
+     </nav>
 
    <section id = "mother">
          <section id = "child">
@@ -27,7 +55,26 @@
             <span id="linkedin"><a href="https://www.linkedin.com/in/lee-daniel-j/">LinkedIn Profile</a></span> 
             <br><br>
             <table id="occupations" border="1"> <!--Table Tag-->
-            
+            <head>
+                <style>
+                    #container{
+                        margin-left: 3em;
+                    }
+
+                    table, th, td{
+                        margin-left: 17em;
+                        padding: 1em;
+                        border: 2px solid black;
+                        
+                    }
+                    th{
+                        background: rgb(90, 194, 207);
+                    }
+                    td{
+                        border-spacing: 2em;
+                    }    
+                </style>
+            </head>
             <caption class="shade">Table of my previous and current occupations</caption>
             <thead>
                 <tr>
