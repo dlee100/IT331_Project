@@ -6,19 +6,38 @@
 <link rel="stylesheet" type="text/css" href="css/project1.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+<script type="text/javascript">
+   // *** Feature 3G : Neat JavaScript thing of my choice
+   // User prompt to rate the website
+   if(confirm("Are you liking this website? Click OK for 'Yes' and click CANCEL for 'No'"))
+        alert("Great! And I'll continue to improve it!"); // OK
+   else
+        alert("Thanks for your feedback! I will do better!"); // cancel
+
+    var rating = prompt("Rate this website from 1-10");
+    if(rating == null) // if click cancel
+        alert ("you clicked cancel");
+    else if(rating == "") // if click OK without entering anything
+        alert ("you did not enter anything");
+    else if (isNaN(rating)) // is not a number
+        alert ("you did not enter a number");
+    else // if all is well
+        alert("you rated this website a " + rating +"/10");
+</script>
 
 </head>
 
 <body>
 
    <nav id="navlist">
-      <ul>
-      <li><a href="index.html">Home</a></li> 
-      <li><a href="occupations.html">Occup.</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contactme.html">Contact Me</a></li>
-      <li><a href="css/project1.css">Style Sheet</a></li>
-      </ul>
+         <ul>
+               <li><a href="index.html">Home</a></li> 
+               <li><a href="occupations.html">Occup.</a></li>
+               <li><a href="portfolio.html">Portfolio</a></li>
+               <li><a href="contactme.html">Contact Me</a></li>
+               <li><a href="references.html">References</a></li>
+               <li><a href="css/project1.css">Style Sheet</a></li>
+               </ul>
    </nav>
 
    <section id = "mother">
@@ -32,7 +51,7 @@
             "Black and Gray Digital Device"; Free licensing from: Pexels; Photo taken: October 11, 2016; 
             <a href="https://www.pexels.com/photo/black-and-gray-digital-device-193003/">Photo by Torsten Dettlaff from Pexels</a>
             <br><br>
-            <a href="/images/IMG_6043.png">"Me and Patrisha in Mexico"</a>; Copyright owner: Daniel Lee; Photo taken: 2019; Equipment: Canon; 
+            <a href="/images/mexico.png">"Me and Patrisha in Mexico"</a>; Copyright owner: Daniel Lee; Photo taken: 2019; Equipment: Canon; 
             <br><br>
             <a href="/images/IMG_1742.jpg">"Me and Theo"</a>; Copyright owner: Patrisha Escueta; Photo taken: 2020; Equipment: iPhone 11;
             <br><br>

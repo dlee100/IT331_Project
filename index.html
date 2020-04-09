@@ -17,6 +17,7 @@
       <li><a href="occupations.html">Occup.</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="contactme.html">Contact Me</a></li>
+      <li><a href="references.html">References</a></li>
       <li><a href="css/project1.css">Style Sheet</a></li>
       </ul>
    </nav>
@@ -24,7 +25,52 @@
    <section id = "mother">
       <section id = "child">
          <a id="content">
-        <br> <h1>Daniel Lee</h1> <a href="#footer" id="foot">Jump to footer</a> </a>
+        <br> <h1>Daniel Lee</h1>  </a>
+            <!--JS-->
+            <script type="text/javascript">
+               // *** Feature 3F : last modified date and time
+               var lastMod = document.lastModified; // variable to easily use the last modified feature
+               document.writeln("<p>Last Modified: ",lastMod,"</p>"); // last modified date and time printed
+            
+               // *** Feature 3D : external window for a user to input their information
+               var regUser; // variable for the external window to open and close
+
+               function start(){ // prepares for the actions to take place (open or close)
+                  document.getElementById("openW").addEventListener("click",open_window,false);
+                  document.getElementById("closeW").addEventListener("click",close_window,false);
+               }
+               function open_window(){ // opens the external window
+                  regUser = document.open("./register.html", "", "height=200, width=300")
+                  document.getElementById("closeW").disabled = false; // disables close button initially
+               }
+               function close_window(){ // closes the external window
+                  if (regUser.closed)
+                     alert("the window has already been closed!"); //alerts user that the window is already closed
+                  else
+                     regUser.close(); // closes the window
+               }
+
+               window.addEventListener("load", start, false); // default values when the page first loads
+
+               // retrieves data from the localStorage to put into the variables
+               var getFname = localStorage.getItem("fname"); // for first name 
+               var getLname = localStorage.getItem("lname"); // for last name
+
+               // *** Feature 3D : Personalized statement
+               document.write("<h2>Hello "+getFname+" "+getLname+"!</h2>");
+            </script>
+            
+            <p>
+            <form id="form1" name="form1" method="POST" >
+               Click the following button to set/reset your name:   
+               <input type = "button" name="openW" id="openW" value="Set/Reset Your Name">
+               <input type = "button" name="closeW" id="closeW" value="Close Window" disabled = "disabled">
+           </form> </p>
+
+           
+         
+
+           
 
          <div id="writing">
             <ul class="a"><li>This website is my personal about and portfolio hub.</li></ul>
@@ -35,26 +81,35 @@
 
          <div id="container">
                
-               
-               <div class="row">
-                 <div class="col-sm-4" style="background-color:transparent;"><img src="images/IMG_6043.png" 
-                  alt="Me and Patrisha in Mexico" style="width:15em; height:25em;"></div>
+               <div class="picframe"> <!--IMAGE CONTAINER-->
+                  <script type="text/javascript">
 
-                 <div class="col-sm-4" id="frame"><img src="images/IMG_1742.jpg" 
-                  alt="Me and Theo" style="width:15em; height:25em; margin-left: 2em;"></div>
+                     // *** Feature 3E : Display random image when page is loaded
+                     // Set of at least 3 images
+                     window.onload = randomImg;
+                     // *** Feature 3B : JavaScript Array
+                     var imgArray = new Array('images/mexico.png','images/IMG_6040.jpg','images/IMG_1742.jpg');
 
-                 <div class="col-sm-4" style="background-color:transparent;"><img src="images/IMG_6040.JPG" 
-                  alt="Me and my fiancée, Patrisha" style="width:15em; height:25em;"></div>
+                     // *** Feature 3A : an example of a JS function
+                     function randomImg() { // random image function
+                        var randomNum = Math.floor(Math.random() * imgArray.length); // uses random number that is within the range of the array to determine which image associated with the number to display
+                        document.getElementById("myPicture").src = imgArray[randomNum];
+                     }
+                  </script>
+                  <img src="index.html" id="myPicture" alt="random image"> <!--Image to be displayed-->
                </div>
-             </div>
+               
+   
+         </div>
          </section>
+         <a id="footer">
+            <footer>Disclaimer Statement: “This website is developed as an educational project." 
+               “Certain materials are included under the fair use exemption of the U.S. Copyright Law 
+               and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
+            <a href="references.html">References Page</a></footer></a> 
    </section>
 
-<a id="footer">
-<footer>Disclaimer Statement: “This website is developed as an educational project." 
-   “Certain materials are included under the fair use exemption of the U.S. Copyright Law 
-   and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
-<a href="references.html">References Page</a></footer></a> <a href="#content">Jump back to content</a>
+
 
 </body>
 </html>
