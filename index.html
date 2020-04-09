@@ -16,6 +16,7 @@
       <li><a href="index.html">Home</a></li> 
       <li><a href="occupations.html">Occup.</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="favshows.html">Fav Shows</a></li>
       <li><a href="contactme.html">Contact Me</a></li>
       <li><a href="references.html">References</a></li>
       <li><a href="css/project1.css">Style Sheet</a></li>
@@ -28,11 +29,11 @@
         <br> <h1>Daniel Lee</h1>  </a>
             <!--JS-->
             <script type="text/javascript">
-               // *** Feature 3F : last modified date and time
+              
                var lastMod = document.lastModified; // variable to easily use the last modified feature
                document.writeln("<p>Last Modified: ",lastMod,"</p>"); // last modified date and time printed
             
-               // *** Feature 3D : external window for a user to input their information
+               
                var regUser; // variable for the external window to open and close
 
                function start(){ // prepares for the actions to take place (open or close)
@@ -40,7 +41,7 @@
                   document.getElementById("closeW").addEventListener("click",close_window,false);
                }
                function open_window(){ // opens the external window
-                  regUser = document.open("./register.html", "", "height=200, width=300")
+                  regUser = document.open("./register.html", "", "height=200, width=300");
                   document.getElementById("closeW").disabled = false; // disables close button initially
                }
                function close_window(){ // closes the external window
@@ -56,8 +57,20 @@
                var getFname = localStorage.getItem("fname"); // for first name 
                var getLname = localStorage.getItem("lname"); // for last name
 
-               // *** Feature 3D : Personalized statement
                document.write("<h2>Hello "+getFname+" "+getLname+"!</h2>");
+
+               // *********** Project 3 script  ***********
+
+               // 3B: For user to input and dynamically change the font size of the page's description portion.
+               var fontSize;
+               function start(){
+                  fontSize = prompt("Choose a font size for the web page's description.");
+                  var fontNode = document.getElementById("writing");
+                  fontNode.setAttribute("style", "font-size:" + fontSize + "pt;");
+
+               }
+               window.addEventListener("load", start, false);
+
             </script>
             
             <p>

@@ -5,7 +5,46 @@
 <meta charset="UTF-8"/>
 <link rel="stylesheet" type="text/css" href="css/project1.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script type="text/javascript">
 
+// 3D: setInterval and clearInterval methods to animate photo
+
+var interval = null; // keeping track of interval
+var speed = 8; // speed of the animation
+var count = 0; // size of image during animation
+
+imgFile = "me.jpg"; // photo of me for contact page
+
+function run(){  // repeatedly runs to animate the photo
+    count += speed;
+
+    if (count >= 375){ // stops animation at this limit
+        window.clearInterval(interval); // clearInterval: to stop the function
+        interval = null;
+    } 
+
+    var enlargeImage = document.getElementById("contactpic");
+    enlargeImage.setAttribute("style", "width: " + (1 * count + "px;") +
+    "height: " + (count + "px;"));
+
+}
+
+function display(imgFile){ // inserts the image to the area
+    if (interval) return;
+
+    var enlargeImage = document.getElementById("contactpic");
+    enlargeImage.setAttribute("style", "width: 0px; height: 0px;");
+    enlargeImage.setAttribute("src", "../" + imgFile);
+    enlargeImage.setAttribute("alt", "Enlarged photo of me");
+    count = 0; // image size starts at 0
+    interval = window.setInterval("run()", 10); // setInterval: runs the animation
+}
+
+function start(){ // register event handler
+    document.getElementById("contactpic").addEventListener("click", function(){display("images/me.jpg");},false);
+}
+window.addEventListener("load", start, false);
+</script>
 
 </head>
 
@@ -16,6 +55,7 @@
                 <li><a href="index.html">Home</a></li> 
                 <li><a href="occupations.html">Occup.</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="favshows.html">Fav Shows</a></li>
                 <li><a href="contactme.html">Contact Me</a></li>
                 <li><a href="references.html">References</a></li>
                 <li><a href="css/project1.css">Style Sheet</a></li>
@@ -26,7 +66,7 @@
       <section id = "child">
             <a href="#footer">Jump to footer</a>
          <h1>Contact Me: <a href="mailto:dlee43@gmu.edu" target="_top">dlee43@gmu.edu</a></h1> 
-         <img src="images/contact.jpg" id="contactpic" alt="Photo by Torsten Dettlaff from Pexels">
+         <img src="images/click-me-button-flat.png" id="contactpic" alt="Photo by Torsten Dettlaff from Pexels">
          
          <div id="form">
                 <form autocomplete="on">

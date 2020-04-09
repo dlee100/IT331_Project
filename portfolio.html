@@ -16,6 +16,7 @@
                <li><a href="index.html">Home</a></li> 
                <li><a href="occupations.html">Occup.</a></li>
                <li><a href="portfolio.html">Portfolio</a></li>
+               <li><a href="favshows.html">Fav Shows</a></li>
                <li><a href="contactme.html">Contact Me</a></li>
                <li><a href="references.html">References</a></li>
                <li><a href="css/project1.css">Style Sheet</a></li>
@@ -30,11 +31,24 @@
          <p style="text-align: center; font-size: 2em;">Below are my works from previous courses:</p>
         <br><br>
             <div class="row">
-                
-                    <div id="linkport" class="col-sm-3" style="background-color: lavender;"><a href="http://mason.gmu.edu/~dlee43/IT104/"><br>IT 104:<br><br>Introduction to Computing</a></div>
-                    <div id="linkport" class="col-sm-3" style="background-color: #A3E4D7;"><a href="http://mason.gmu.edu/~dlee43/Ready_for_Wardrobe/index.html"><br>IT 213:<br><br>Introduction to Web Design</a></div>
-                    <div id="linkport" class="col-sm-3" style="background-color: lavenderblush;"><a href="http://helios.vse.gmu.edu/~dlee43/IT207/"><br>IT 207:<br>Applied IT Programming</a><br>You must be connected to GMU's helios server to access.</div>
-                  </div> 
+                  <script type="text/javascript">
+                  // 3C: ROLLOVER EFFECT
+                  document.addEventListener("mouseover", mouseOver, false);
+                  document.addEventListener("mouseout", mouseOut, false);
+                  function mouseOver(e){
+                     if (e.target.getAttribute("id") == "linkport")
+                     {e.target.setAttribute("style", "background-color: #aee1cd");}
+                  }
+                  function mouseOut(e){
+                     if (e.target.getAttribute("id") == "linkport")
+                     {e.target.setAttribute("style", "background-color: transparent");}
+                  }
+
+                  </script> 
+                  <div id="linkport" class="col-sm-3"><a href="http://mason.gmu.edu/~dlee43/IT104/"><br>IT 104:<br><br>Introduction to Computing</a></div>
+                  <div id="linkport" class="col-sm-3"><a href="http://mason.gmu.edu/~dlee43/Ready_for_Wardrobe/index.html"><br>IT 213:<br><br>Introduction to Web Design</a></div>
+                  <div id="linkport" class="col-sm-3"><a href="http://helios.vse.gmu.edu/~dlee43/IT207/"><br>IT 207:<br>Applied IT Programming</a><br>You must be connected to GMU's helios server to access.</div>
+            </div> 
             <br>
             <br>
             <span style="margin-left: 3em">Open Window to my GitHub!</span>

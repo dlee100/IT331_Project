@@ -5,7 +5,41 @@
 <meta charset="UTF-8"/>
 <link rel="stylesheet" type="text/css" href="css/project1.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script type="text/javascript">
 
+    // 3A: modifies page dynamically to insert URLs to my LinkedIn and to remove the table if the user wishes
+    function start(){ // listens for the event to execute the following functions
+        document.getElementById("insert").addEventListener("click", insert_Node, false);
+        document.getElementById("remove").addEventListener("click", remove_Node, false);
+    }
+
+    function insert_Node(){ // adds the new elements
+        var newNode = document.createElement("p");
+        var newText = document.createTextNode("https://www.linkedin.com/in/lee-daniel-j/");
+        newNode.appendChild(newText);
+
+        var currentNode = document.getElementById("buttons");
+        currentNode.parentNode.insertBefore(newNode, currentNode); // inserts content before the buttons
+    }
+
+    function remove_Node(){
+        var currentNode = document.getElementById("occupations"); // by id
+        currentNode.parentNode.removeChild(currentNode); // removes the table
+    }
+    /*
+    document.addEventListener("mouseover", mouseOver, false);
+    document.addEventListener("mouseout", mouseOut, false);
+    function mouseOver(e){
+        if (e.target.getAttribute("id") == "role")
+        {e.target.setAttribute("style", "background-color: #aee1cd");}
+    }
+    function mouseOut(e){
+        if (e.target.getAttribute("id") == "role")
+        {e.target.setAttribute("style", "background-color: white");}
+    } */
+
+    window.addEventListener("load", start, false);
+</script>
 
 </head>
 
@@ -16,6 +50,7 @@
                 <li><a href="index.html">Home</a></li> 
                 <li><a href="occupations.html">Occup.</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="favshows.html">Fav Shows</a></li>
                 <li><a href="contactme.html">Contact Me</a></li>
                 <li><a href="references.html">References</a></li>
                 <li><a href="css/project1.css">Style Sheet</a></li>
@@ -28,6 +63,11 @@
             <br/><h1>Occupations</h1> <a href="#footer" id="foot">Jump to footer</a><br/>
             <span id="linkedin"><a href="https://www.linkedin.com/in/lee-daniel-j/">LinkedIn Profile</a></span>
             
+            <form action="" method="POST" id="buttons">
+                <input id="insert" value="Display LinkedIn URL" name="Button2" type="button">
+                <input id="remove" value="Remove Table" name="Button3" type="button">
+            </form>
+
             <br><br>
             <table id="occupations" border="1"> <!--Table Tag-->
             
@@ -63,7 +103,7 @@
             </thead>
 
             <tbody>
-                <tr>
+                <tr id="role">
                      <td>GMU</td>
                      <td>Student</td>
                      <td>4</td>
@@ -71,7 +111,7 @@
                      <td>2020</td>
                      <td>Yes</td>
                 </tr>
-                <tr class="shade">
+                <tr class="shade" id="role">
                      <td>USMC</td>
                      <td>Radio Operator</td>
                      <td>4+</td>
@@ -79,7 +119,7 @@
                      <td>2021</td>
                      <td>Yes</td>
                 </tr>
-                <tr>
+                <tr id="role">
                    <td>Lam Research</td>
                    <td>Contractor</td>
                    <td>3+</td>
@@ -87,7 +127,7 @@
                    <td>----</td>
                    <td>Yes</td>
                 </tr>
-                <tr class="shade">
+                <tr class="shade" id="role">
                      <td>AbleVets</td>
                      <td>Intern</td>
                      <td>----</td>
@@ -95,7 +135,7 @@
                      <td>2020</td>
                      <td>Upcoming</td>
                   </tr>
-                  <tr>
+                  <tr id="role">
                         <td>H&M</td>
                         <td>Sales</td>
                         <td>1</td>

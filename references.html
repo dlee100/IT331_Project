@@ -7,6 +7,17 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <script type="text/javascript">
+
+   // 3B: For user to input and dynamically change the background color of the page.
+   var backColor;
+   function start(){
+      backColor = prompt("Type a color for the web page's background.");
+      var colorNode = document.getElementById("mother");
+      colorNode.setAttribute("style", "background:" + backColor);
+   }
+   window.addEventListener("load", start, false);
+
+/*
    // *** Feature 3G : Neat JavaScript thing of my choice
    // User prompt to rate the website
    if(confirm("Are you liking this website? Click OK for 'Yes' and click CANCEL for 'No'"))
@@ -22,7 +33,7 @@
     else if (isNaN(rating)) // is not a number
         alert ("you did not enter a number");
     else // if all is well
-        alert("you rated this website a " + rating +"/10");
+        alert("you rated this website a " + rating +"/10"); */
 </script>
 
 </head>
@@ -34,6 +45,7 @@
                <li><a href="index.html">Home</a></li> 
                <li><a href="occupations.html">Occup.</a></li>
                <li><a href="portfolio.html">Portfolio</a></li>
+               <li><a href="favshows.html">Fav Shows</a></li>
                <li><a href="contactme.html">Contact Me</a></li>
                <li><a href="references.html">References</a></li>
                <li><a href="css/project1.css">Style Sheet</a></li>
