@@ -1,4 +1,4 @@
-# IT331_Project
-This is for my second project in my Web Development course: IT331 
+# IT331_Project 3
+This is for my third project in my Web Development course: IT331 
 
-This is Project 2: JavaScript
+This is Project 3: DOM, JavaScript events, and XML/JSON
