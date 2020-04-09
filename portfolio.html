@@ -12,19 +12,20 @@
 <body>
 
    <nav id="navlist">
-      <ul>
-      <li><a href="index.html">Home</a></li> 
-      <li><a href="occupations.html">Occup.</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contactme.html">Contact Me</a></li>
-      <li><a href="css/project1.css">Style Sheet</a></li>
-      </ul>
+         <ul>
+               <li><a href="index.html">Home</a></li> 
+               <li><a href="occupations.html">Occup.</a></li>
+               <li><a href="portfolio.html">Portfolio</a></li>
+               <li><a href="contactme.html">Contact Me</a></li>
+               <li><a href="references.html">References</a></li>
+               <li><a href="css/project1.css">Style Sheet</a></li>
+               </ul>
    </nav>
 
    <section id = "mother" style="background-image: url('images/dev.jpg');" alt="dev pic background">
       <section id = "child">
           <br>
-         <h1>Website Portfolio</h1> <a href="#footer">Jump to footer</a>
+         <h1>Website Portfolio</h1> 
          <br>
          <p style="text-align: center; font-size: 2em;">Below are my works from previous courses:</p>
         <br><br>
@@ -36,7 +37,35 @@
                   </div> 
             <br>
             <br>
-            <span style="margin-left: 3em"><a href="https://github.com/dlee100">Here is a link to my GitHub</a></span>
+            <span style="margin-left: 3em">Open Window to my GitHub!</span>
+            <script type="text/javascript">
+                // *** Feature 3C : external sized window for a user to my github page
+               var githubWindow; // variable for the github external window
+
+               function start(){ // prepares for the actions to take place (open or close)
+                  document.getElementById("openW").addEventListener("click",open_window,false);
+                  document.getElementById("closeW").addEventListener("click",close_window,false);
+               }
+
+               function open_window(){ // opens the external window
+                  githubWindow = document.open("https://github.com/dlee100", "", "height=600, width=800")
+                  document.getElementById("closeW").disabled = false; // disables close button initially
+               }
+
+               function close_window(){ // closes the external window
+                  if (githubWindow.closed)
+                     alert("the window has already been closed!"); //alerts user that the window is already closed
+                  else
+                     githubWindow.close(); // closes the window
+               }
+
+               window.addEventListener("load", start, false);  // default values when the page first loads
+            </script>
+
+            <form id="form1" name="form1" method="POST">
+                <input type = "button" name="openW" id="openW" value="Open Window">
+                <input type = "button" name="closeW" id="closeW" value="Close Window" disabled = "disabled">
+            </form> 
          </section>
    </section>
    <a id="footer">

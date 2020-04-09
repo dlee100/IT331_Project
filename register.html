@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Register</title>
+        <script type="text/javascript"> 
+
+            
+            // *** Feature 3D : USER PROMPT FOR LOCAL STORAGE
+            // *** Feature 3A : an example of a JS function
+            function save_data(){ // to save the data into the localStorage
+
+                // *** Feature 3D : inputs can be reset by the user if the user wants to change names
+
+                var inputF = document.getElementById("fname"); // first name Key
+                localStorage.setItem("fname", inputF.value); // saves it to localStorage
+
+                var inputL = document.getElementById("lname"); // last name Key
+                localStorage.setItem("lname", inputL.value); // saves it to localStorage
+
+                window.close(); // closes the window right after submitting the info
+            }
+            
+        </script>
+    </head>
+    <body>
+    Enter your name:
+    
+        <form action="/index.html" onsubmit="save_data()">
+            
+            <input type="text" name="fname" id="fname" placeholder="First Name">
+            <input type="text" name="lname" id="lname" placeholder="Last Name">
+            <button type="submit">Save</button>
+
+        </form>
+    </body>
+</html>
