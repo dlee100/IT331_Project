@@ -27,7 +27,7 @@ body {
 .navbar {
     position: fixed;
     background-color: var(--bg-primary);
-    transition: width 600ms ease;
+    /*transition: width 600ms ease;*/
 }
 .navbar-nav {
     list-style: none;
