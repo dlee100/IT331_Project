@@ -34,7 +34,7 @@ function display(imgFile){ // inserts the image to the area
 
     var enlargeImage = document.getElementById("contactpic");
     enlargeImage.setAttribute("style", "width: 0px; height: 0px;");
-    enlargeImage.setAttribute("src", "../" + imgFile);
+    enlargeImage.setAttribute("src", imgFile);
     enlargeImage.setAttribute("alt", "Enlarged photo of me");
     count = 0; // image size starts at 0
     interval = window.setInterval("run()", 10); // setInterval: runs the animation
