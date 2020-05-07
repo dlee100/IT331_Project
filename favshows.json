@@ -1,0 +1,24 @@
+{
+    "favorites": {
+        "show": [
+            {
+                "name": "Avatar: The Last Airbender",
+                "years": "2005-2008",
+                "genre": "Fantasy",
+                "reason": "Impeccable story arch, intriguing eastern philosophies, and the most memorable characters."
+            },
+            {
+                "name": "The Expanse",
+                "years": "2015-Present",
+                "genre": "Sci-fi",
+                "reason": "Very realistic space physics, diverse cast and characters, and the complex geo-politics and cultures between Earth, Mars, and the Asteroid Belt."
+            },
+            {
+                "name": "Violet Evergarden",
+                "years": "2018",
+                "genre": "Anime",
+                "reason": "A war veteran that becomes an intimate letter writer to discover the meaning of the word 'love.' An amazing transition story from her emotional state of a war machine into a warm human being."
+            }
+        ]
+    }
+}

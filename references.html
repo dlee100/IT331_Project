@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>References</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="css/project1.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script type="text/javascript">
+
+   // 3B: For user to input and dynamically change the background color of the page.
+   var backColor;
+   function start(){
+      backColor = prompt("Type a color for the web page's background.");
+      var colorNode = document.getElementById("mother");
+      colorNode.setAttribute("style", "background:" + backColor);
+   }
+   window.addEventListener("load", start, false);
+
+/*
+   // *** Feature 3G : Neat JavaScript thing of my choice
+   // User prompt to rate the website
+   if(confirm("Are you liking this website? Click OK for 'Yes' and click CANCEL for 'No'"))
+        alert("Great! And I'll continue to improve it!"); // OK
+   else
+        alert("Thanks for your feedback! I will do better!"); // cancel
+
+    var rating = prompt("Rate this website from 1-10");
+    if(rating == null) // if click cancel
+        alert ("you clicked cancel");
+    else if(rating == "") // if click OK without entering anything
+        alert ("you did not enter anything");
+    else if (isNaN(rating)) // is not a number
+        alert ("you did not enter a number");
+    else // if all is well
+        alert("you rated this website a " + rating +"/10"); */
+</script>
+
+</head>
+
+<body>
+
+   <nav id="navlist">
+         <ul>
+               <li><a href="index.html">Home</a></li> 
+               <li><a href="occupations.html">Occup.</a></li>
+               <li><a href="portfolio.html">Portfolio</a></li>
+               <li><a href="favshows.html">Fav Shows</a></li>
+               <li><a href="contactme.html">Contact Me</a></li>
+               <li><a href="references.html">References</a></li>
+               <li><a href="css/project1.css">Style Sheet</a></li>
+               </ul>
+   </nav>
+
+   <section id = "mother">
+      <section id = "child">
+         <br/><h1>References</h1> <br/> <a href="#footer" id="foot">Jump to footer</a> <br/>
+         <div id="writing">
+            <br><br>
+            "Apple Wireless Keyboard"; Free licensing from: Pexels; Photo taken: September 15, 2016; 
+            <a href="https://www.pexels.com/photo/blank-business-composition-computer-373076/">Photo by Pixabay from Pexels</a>
+            <br><br>
+            "Black and Gray Digital Device"; Free licensing from: Pexels; Photo taken: October 11, 2016; 
+            <a href="https://www.pexels.com/photo/black-and-gray-digital-device-193003/">Photo by Torsten Dettlaff from Pexels</a>
+            <br><br>
+            <a href="/images/mexico.png">"Me and Patrisha in Mexico"</a>; Copyright owner: Daniel Lee; Photo taken: 2019; Equipment: Canon; 
+            <br><br>
+            <a href="/images/IMG_1742.jpg">"Me and Theo"</a>; Copyright owner: Patrisha Escueta; Photo taken: 2020; Equipment: iPhone 11;
+            <br><br>
+            <a href="/images/IMG_6040.JPG">"Me and my fiancée, Patrisha"</a>; Copyright owner: Patrisha Escueta; Photo taken: 2020; Equipment: iPhone 11;
+           
+         </div> <br><br>
+
+         
+         </section>
+   </section>
+
+   <a id="footer">
+<footer>Disclaimer Statement: “This website is developed as an educational project." 
+   “Certain materials are included under the fair use exemption of the U.S. Copyright Law 
+   and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
+<a href="references.html">References Page</a></footer></a>
+
+</body>
+</html>

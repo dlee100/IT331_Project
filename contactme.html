@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Contact Me</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="css/project1.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script type="text/javascript">
+
+// 3D: setInterval and clearInterval methods to animate photo
+
+var interval = null; // keeping track of interval
+var speed = 8; // speed of the animation
+var count = 0; // size of image during animation
+
+imgFile = "me.jpg"; // photo of me for contact page
+
+function run(){  // repeatedly runs to animate the photo
+    count += speed;
+
+    if (count >= 375){ // stops animation at this limit
+        window.clearInterval(interval); // clearInterval: to stop the function
+        interval = null;
+    } 
+
+    var enlargeImage = document.getElementById("contactpic");
+    enlargeImage.setAttribute("style", "width: " + (1 * count + "px;") +
+    "height: " + (count + "px;"));
+
+}
+
+function display(imgFile){ // inserts the image to the area
+    if (interval) return;
+
+    var enlargeImage = document.getElementById("contactpic");
+    enlargeImage.setAttribute("style", "width: 0px; height: 0px;");
+    enlargeImage.setAttribute("src", imgFile);
+    enlargeImage.setAttribute("alt", "Enlarged photo of me");
+    count = 0; // image size starts at 0
+    interval = window.setInterval("run()", 10); // setInterval: runs the animation
+}
+
+function start(){ // register event handler
+    document.getElementById("contactpic").addEventListener("click", function(){display("images/me.jpg");},false);
+}
+window.addEventListener("load", start, false);
+</script>
+
+</head>
+
+<body>
+
+   <nav id="navlist">
+        <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="occupations.html">Occup.</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="favshows.html">Fav Shows</a></li>
+                <li><a href="contactme.html">Contact Me</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="css/project1.css">Style Sheet</a></li>
+                </ul>
+   </nav>
+
+   <section id = "mother">
+      <section id = "child">
+            <a href="#footer">Jump to footer</a>
+         <h1>Contact Me: <a href="mailto:dlee43@gmu.edu" target="_top">dlee43@gmu.edu</a></h1> 
+         <img src="images/click-me-button-flat.png" id="contactpic" alt="Photo by Torsten Dettlaff from Pexels">
+         
+         <div id="form">
+                <form autocomplete="on">
+                    <fieldset>
+                        
+                        <p><label>Your Name: <input name="name" type="text" size="25"></label></p>
+                        <p><label>Your Email Address: <input name="email" type="email" size="50"></label></p>
+                    
+                        <p><label>Today is: <select id="days" name="days">
+                                        <option selected>- Choose One -</option>
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+                                        <option value="Sunday">Sunday</option>
+                              </select></label></p>
+                              
+                              
+                              
+                        
+                        <p><label>The month is: <input name="months" type="year" placeholder="Select the month" list="month">
+                            <datalist id="months">
+                                <option value="January">
+                                <option value="February">
+                                <option value="March">
+                                <option value="April">
+                                <option value="May">
+                                <option value="June">
+                                <option value="July">
+                                <option value="August">
+                                <option value="September">
+                                <option value="October">
+                                <option value="November">
+                                <option value="December">
+                            </datalist></label></p>
+                        
+
+                            <label>What brings you here? <br>
+                                <input type="checkbox" id="choice1" name="editing" value="edit">
+                                <label for="vehicle1"> Editing</label>
+                                <input type="checkbox" id="choice2" name="looking around" value="look">
+                                <label for="vehicle2"> Looking around</label>
+                                <input type="checkbox" id="choice3" name="grading" value="grade">
+                                <label for="vehicle3"> Grading</label>
+                                <input type="checkbox" id="choice4" name="other" value="other">
+                                <label for="vehicle3"> Other</label>
+                                </label>
+
+                        <p><label>How would you rate my website?
+                            <select name="rating">
+                                <option selected> - Choose One - </option>
+                                <option>Excellent</option>
+                                <option>Good</option>
+                                <option>Fair</option>
+                                <option>Poor</option>
+                                <option>Terrible</option>
+                                
+                            </select>
+                        </label></p>
+                        
+                        <p><legend><label>Comments<br></legend>
+                            <textarea name="comments" rows="5" cols="72"></textarea>
+                        </label></p>
+            
+                        <p>Would you like to personally email me?
+                            <label>
+                                <input type="radio" name="select" id="yes"> Yes 
+                                <input type="radio" name="select" id="no"> No <br>
+                            </label>
+                        </p>
+                        <p>
+                            <input type = "submit" value="submit">
+                            <input type = "reset" value="clear">
+                        </p>
+                    </fieldset>
+                    </form>
+               </div>
+               
+         </section>
+         
+   </section>
+<a id="footer">
+   <footer>Disclaimer Statement: “This website is developed as an educational project." 
+        “Certain materials are included under the fair use exemption of the U.S. Copyright Law 
+        and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
+     <a href="references.html">References Page</a></footer></a>
+
+</body>
+
+</html>

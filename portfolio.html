@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My Portfolio</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="css/project1.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+   <nav id="navlist">
+         <ul>
+               <li><a href="index.html">Home</a></li> 
+               <li><a href="occupations.html">Occup.</a></li>
+               <li><a href="portfolio.html">Portfolio</a></li>
+               <li><a href="favshows.html">Fav Shows</a></li>
+               <li><a href="contactme.html">Contact Me</a></li>
+               <li><a href="references.html">References</a></li>
+               <li><a href="css/project1.css">Style Sheet</a></li>
+               </ul>
+   </nav>
+
+   <section id = "mother" style="background-image: url('images/dev.jpg');" alt="dev pic background">
+      <section id = "child">
+          <br>
+         <h1>Website Portfolio</h1> 
+         <br>
+         <p style="text-align: center; font-size: 2em;">Below are my works from previous courses:</p>
+        <br><br>
+            <div class="row">
+                  <script type="text/javascript">
+                  // 3C: ROLLOVER EFFECT
+                  document.addEventListener("mouseover", mouseOver, false);
+                  document.addEventListener("mouseout", mouseOut, false);
+                  function mouseOver(e){
+                     if (e.target.getAttribute("id") == "linkport")
+                     {e.target.setAttribute("style", "background-color: #aee1cd");}
+                  }
+                  function mouseOut(e){
+                     if (e.target.getAttribute("id") == "linkport")
+                     {e.target.setAttribute("style", "background-color: transparent");}
+                  }
+
+                  </script> 
+                  <div id="linkport" class="col-sm-3"><a href="http://mason.gmu.edu/~dlee43/IT104/"><br>IT 104:<br><br>Introduction to Computing</a></div>
+                  <div id="linkport" class="col-sm-3"><a href="http://mason.gmu.edu/~dlee43/Ready_for_Wardrobe/index.html"><br>IT 213:<br><br>Introduction to Web Design</a></div>
+                  <div id="linkport" class="col-sm-3"><a href="http://helios.vse.gmu.edu/~dlee43/IT207/"><br>IT 207:<br>Applied IT Programming</a><br>You must be connected to GMU's helios server to access.</div>
+            </div> 
+            <br>
+            <br>
+            <span style="margin-left: 3em">Open Window to my GitHub!</span>
+            <script type="text/javascript">
+                // *** Feature 3C : external sized window for a user to my github page
+               var githubWindow; // variable for the github external window
+
+               function start(){ // prepares for the actions to take place (open or close)
+                  document.getElementById("openW").addEventListener("click",open_window,false);
+                  document.getElementById("closeW").addEventListener("click",close_window,false);
+               }
+
+               function open_window(){ // opens the external window
+                  githubWindow = document.open("https://github.com/dlee100", "", "height=600, width=800")
+                  document.getElementById("closeW").disabled = false; // disables close button initially
+               }
+
+               function close_window(){ // closes the external window
+                  if (githubWindow.closed)
+                     alert("the window has already been closed!"); //alerts user that the window is already closed
+                  else
+                     githubWindow.close(); // closes the window
+               }
+
+               window.addEventListener("load", start, false);  // default values when the page first loads
+            </script>
+
+            <form id="form1" name="form1" method="POST">
+                <input type = "button" name="openW" id="openW" value="Open Window">
+                <input type = "button" name="closeW" id="closeW" value="Close Window" disabled = "disabled">
+            </form> 
+         </section>
+   </section>
+   <a id="footer">
+   <footer>Disclaimer Statement: “This website is developed as an educational project." 
+        “Certain materials are included under the fair use exemption of the U.S. Copyright Law 
+        and have been prepared according to the multimedia fair use guidelines and are restricted from further use."<br>
+     <a href="references.html">References Page</a></footer></a>
+</body>
+</html>
